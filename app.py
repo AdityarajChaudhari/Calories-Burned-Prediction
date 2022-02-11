@@ -1,7 +1,6 @@
 import numpy as np
 from flask import Flask, render_template, request, jsonify
 import pickle
-import psycopg2
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
