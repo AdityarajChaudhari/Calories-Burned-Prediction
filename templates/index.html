@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <header>
+                <h1>CALORIES BURNT PREDICTION</h1>
+            </header>
+        </div>
+
+        <div class="back-page">
+            <a href="{{ url_for ('home') }}" , methods = "GET">
+                <input class="button" type="submit"  value="⬅Back TO home page" name="">
+            </a>
+        </div>
+
+
+
+        <div class="my-form">
+
+            <form>
+
+                <label class="gen">GENDER</label><br><br>
+                <select class="gen-i" name="gen" id="gen" required="required">
+                <option disabled selected value>  - select -  </option>
+                <option value="Male" >Male</option>
+                <option value="Female" >Female</option>
+                </select><br>
+                <br>
+
+                <label class="age">AGE</label><br><br>
+                <input class="age-i" type="number" name="age" placeholder="Age"  step="1"  min="1" max="102" required="required"><br>
+
+                <label class="weight">WEIGHT</label><br><br>
+                <input class="weight-i" type="number" name="weight" placeholder="Weight"  step="0.01"  min="10" max="200" required="required"><br>
+
+                <label class="dur">DURATION</label><br><br>
+                <input class="dur-i" type="number" name="dur" placeholder="Duration"  step="0.01"  min="1" max="360" required="required"><br>
+
+                <label class="hrt">HEART RATE</label><br><br>
+                <input class="hrt-i" type="number" name="hrt" placeholder="Heart Rate"  step="0.01"  min="1" max="150" required="required"><br>
+
+                <button  type="reset" class="reset-but">Reset</button>
+
+                <br><br>
+
+
+                <button  formaction="{{url_for ('predict')}}" formmethod="post" type="submit" class="submit-but" value="predict">Predict</button>
+
+
+
+                <div class="foot">
+                <footer>Copyright © 2022 by Adityaraj Hemant Chaudhari</footer>
+                </div>
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
